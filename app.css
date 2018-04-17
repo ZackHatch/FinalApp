@@ -6,3 +6,9 @@
 .row {
     outline: 1x solid black;
 }
+
+@media (min-width: 768px) {
+    div.col-md-2 {
+        width: 20%
+    }
+}
