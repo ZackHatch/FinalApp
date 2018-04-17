@@ -4,9 +4,11 @@ enterbutton.addEventListener('click', () => {
     document.getElementById('output').textContent = bingocheck()
 });
 
-function putingrid(){
+function putinarray(){
     var input = document.getElemenById("textbox").value;
    var array = [];
     array.push(input);
-
+}
+function random(array){
+    return Math.random(array)
 }
