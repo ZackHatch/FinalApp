@@ -20,5 +20,8 @@ function shuffle (someArray) {
     return someArray;
 }
 function Array(){
-    var array = ["s1", "s2", "s3", "s4", "s5", "s6", "s7", "s8", "s9", "s10", "s11", "s12", "s13", "s14", "s15", "s16"," s17", "s18"," s19", "s20", "s21", "s22", "s23", "s24"]
+    var array = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"," 17", "18"," 19", "20", "21", "22", "23", "24"]
+
+function insertText () {
+    document.getElementById('').innerHTML = "Some text to enter";
 }
