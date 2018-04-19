@@ -5,7 +5,7 @@ button.addEventListener('click', () => {
 });
 
 function putinarray(){
-    var input = document.getElemenById("item").value;
+    var input = document.getElementById("item").value;
    var array = [];
     array.push(input);
 }
