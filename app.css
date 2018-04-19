@@ -1,6 +1,15 @@
-th, td {
+th {
     border: 4px solid black;
     text-align: center;
+    width: 20%;
+    background-color: indianred;
+}
+
+
+td {
+    border: 4px solid black;
+    text-align: center;
+    width: 20%;
 }
 
 .row {
@@ -9,11 +18,12 @@ th, td {
 #bingo {
     outline: 4px solid black;
     text-align: center;
-    width: 1000px;
-    height: 1000px;
+    width: 800px;
+    height: 800px;
 }
 
 #free {
     font-weight: bold;
     text-align: center;
+    background-color: orange;
 }
