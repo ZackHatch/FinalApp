@@ -1,7 +1,7 @@
 Start
-var enterbutton = document.getElementById("textbox");
-enterbutton.addEventListener('click', () => {
-    document.getElementById('output').textContent = bingocheck()
+var button = document.getElementById("item");
+button.addEventListener('click', () => {
+    document.getElementById('addList').textContent = putinarray()
 });
 
 function putinarray(){
@@ -11,6 +11,6 @@ function putinarray(){
 }
 function random(array){
     var word = array.shuffle
-    return [Math.floor(Math.random(word)*array.length)]
+    var phat = [Math.floor(Math.random(word)*array.length)]
 
 }
