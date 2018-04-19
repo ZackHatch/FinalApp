@@ -16,6 +16,7 @@ function shuffle (someArray) {
         someArray[i] = someArray[j];
         someArray[j] = x;
     }
+    consle.log(someArray)
     return someArray;
 }
 function Array(){
