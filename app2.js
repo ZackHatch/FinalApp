@@ -25,6 +25,8 @@ function Array(){
 function insertText () {
     document.getElementById('').innerHTML = "Some text to enter";
 }
-for loop that adds the input to each cell
-cpounter that shows how many things left you can oninput
-generate button that uses for loop to put t into the cells
+//for loop that adds the input to each cell
+//cpounter that shows how many things left you can oninput
+//generate button that uses for loop to put t into the cells
+    //alert that pops up if you try to generate before it is full
+    //alert that pops up if you try to add more than 24
