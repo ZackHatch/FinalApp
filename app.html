@@ -2,32 +2,37 @@
 <html>
 
 <head>
-     <meta charset="utf-8">
+    <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <h1>Bingo Card Generator</h1>
-    </head>
-    <style>
-        [class*= "col-md-"] {
-            border: solid 1px black;
-        }
-    </style>
-    <body>
-<div class="container">
-     <div class="row">
-       <div class="col-md-2 col-md-offset-1">B</div>
-       <div class="col-md-2">I</div>
-       <div class="col-md-2">N</div>
-       <div class="col-md-2">G</div>
-       <div class="col-md-2">O</div>
-     </div>
-    <div class="row">
-       <div class="col-md-2 col-md-offset-1"></div>
-       <div class="col-md-2"></div>
-       <div class="col-md-2"></div>
-       <div class="col-md-2"></div>
-       <div class="col-md-2"></div>
-     </div>
-   </div>
-    </body>
+</head>
+<style>
+    div {
+        border: solid 1px black;
+    }
+
+</style>
+
+<body>
+    <div id="content">
+        <table id="bingo">
+            <tr>
+                <th>B</th>
+                <th>I</th>
+                <th>N</th>
+                <th>G</th>
+                <th>O</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
 </html>
