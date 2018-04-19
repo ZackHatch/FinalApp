@@ -6,11 +6,16 @@ button.addEventListener('click', () => {
 
 function putinarray(){
     var input = document.getElementById("item").value;
-   var array = [];
+   var someArray = [];
     array.push(input);
 }
-function random(array){
-    var word = array.shuffle
-    var phat = [Math.floor(Math.random(word)*array.length)]
 
+function shuffle (someArray) {
+    for ( var i = someArray.length - 1; i > 0; i--) {
+         var j = Math.floor(Math.random() * (i + 1));
+         var x = someArray[i];
+        someArray[i] = someArray[j];
+        someArray[j] = x;
+    }
+    return someArray;
 }
