@@ -1,4 +1,3 @@
-Start
 var button = document.getElementById("item");
 button.addEventListener('click', () => {
     document.getElementById('addList').textContent = putinarray()
@@ -6,12 +5,12 @@ button.addEventListener('click', () => {
 
 function putinarray(){
     var input = document.getElementById("item").value;
-   var someArray = [];
-    array.push(input);
+   var someArray = str.split(",");
+    someArray.push(input);
 }
 
 function shuffle (someArray) {
-    for ( var i = someArray.length - 1; i > 0; i--) {
+    for (var i = someArray.length - 1; i > 0; i--) {
          var j = Math.floor(Math.random() * (i + 1));
          var x = someArray[i];
         someArray[i] = someArray[j];
