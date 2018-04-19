@@ -5,10 +5,12 @@ enterbutton.addEventListener('click', () => {
 });
 
 function putinarray(){
-    var input = document.getElemenById("textbox").value;
+    var input = document.getElemenById("item").value;
    var array = [];
     array.push(input);
 }
 function random(array){
-    return Math.random(array)
+    var word = array.pop
+    return Math.random(word)
+
 }
