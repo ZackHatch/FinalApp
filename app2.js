@@ -10,7 +10,7 @@ function putinarray(){
     array.push(input);
 }
 function random(array){
-    var word = array.pop
-    return Math.random(word)
+    var word = array.shuffle
+    return [Math.floor(Math.random(word)*array.length)]
 
 }
