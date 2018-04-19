@@ -1,4 +1,5 @@
 th {
+    font-size: 18pt;
     border: 4px solid black;
     text-align: center;
     width: 20%;
@@ -23,7 +24,16 @@ td {
 }
 
 #free {
+    font-size: 18pt;
     font-weight: bold;
     text-align: center;
     background-color: orange;
+}
+h1, p {
+    text-align: center;
+}
+
+.comicsans {
+    font-family: "Comic Sans MS", cursive, "sans-serif";
+    font-weight: bold;
 }
