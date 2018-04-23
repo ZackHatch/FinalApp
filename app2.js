@@ -34,7 +34,7 @@ var button = document.getElementById('addList');
 button.addEventListener('click', additem)
 
 function additem() {
-    var i = document.getElementById("item").value;
+    var input = document.getElementById("item").value;
     var li = document.createElement("li");
     var deletebutton = document.createElement("button");
     deletebutton.textContent = "Delete";
@@ -43,7 +43,7 @@ function additem() {
         deletebutton.parentElement.remove();
     });
     for (i = 0; i < 24; i++) {
-document.getElementById("1").textContent = input
+document.getElementById(i).textContent = input
     }
     li.textContent = input + "";
     li.appendChild(deletebutton);
