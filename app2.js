@@ -44,8 +44,8 @@ function additem() {
     return document.getElementById("ul").appendChild(li);
 }
 
-function loop {
+function Generate() {
 for (i = 0; i < 24; i++) {
-    document.getElementById(i+1).textContent = someArray[i];
+    document.getElementById(i+1).textContent = array[i];
 }
 }
