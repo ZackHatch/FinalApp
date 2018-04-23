@@ -44,6 +44,10 @@ function additem() {
     return document.getElementById("ul").appendChild(li);
 }
 
+function loop {
 for (i = 0; i < 24; i++) {
-    document.getElementById(i).textContent = input
+    document.getElementById().textContent = input
+}
+
+var rand = Math.random()
 }
