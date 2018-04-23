@@ -1,8 +1,3 @@
-var button1 = document.getElementById("item");
-button.addEventListener('click', () => {
-    document.getElementById('addList').textContent = putinarray()
-});
-
 function putinarray(){
     var input = document.getElementById("item").value;
    var someArray = str.split(",");
