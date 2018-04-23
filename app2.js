@@ -46,3 +46,7 @@ function additem() {
     li.appendChild(deletebutton);
     return document.getElementById("ul").appendChild(li);
 }
+
+for (i = 0; i < 24; i++) {
+document.getElementById("1").textContent = input
+    }
