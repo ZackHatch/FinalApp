@@ -1,3 +1,5 @@
+var array = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", " 17", "18", " 19", "20", "21", "22", "23", "24"]
+
 function putinarray() {
     var input = document.getElementById("item").value;
     var someArray = str.split(",");
@@ -15,9 +17,6 @@ function shuffle(someArray) {
     return someArray;
 }
 
-
-var array = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", " 17", "18", " 19", "20", "21", "22", "23", "24"]
-
 function insertText() {
     document.getElementById('').innerHTML = "Some text to enter";
 }
@@ -27,8 +26,6 @@ function insertText() {
 //generate button that uses for loop to put t into the cells
 //alert that pops up if you try to generate before it is full
 //alert that pops up if you try to add more than 24
-
-
 
 var button = document.getElementById('addList');
 button.addEventListener('click', additem)
@@ -48,5 +45,5 @@ function additem() {
 }
 
 for (i = 0; i < 24; i++) {
-document.getElementById(i).textContent = input
-    }
+    document.getElementById(i).textContent = input
+}
