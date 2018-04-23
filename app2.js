@@ -42,8 +42,8 @@ function additem() {
     deletebutton.addEventListener('click', () => {
         deletebutton.parentElement.remove();
     });
-    for (i < 0; i < 24; i++) {
-
+    for (i = 0; i < 24; i++) {
+document.getElementById("1").textContent = input
     }
     li.textContent = input + "";
     li.appendChild(deletebutton);
