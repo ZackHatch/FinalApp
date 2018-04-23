@@ -50,3 +50,6 @@ function Generate() {
         document.getElementById(i + 1).textContent = array[i];
     }
 }
+
+var generateButton = document.getElementById('generate');
+button.addEventListener('click', Generate)
