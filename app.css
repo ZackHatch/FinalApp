@@ -3,6 +3,7 @@ th {
     border: 4px solid black;
     text-align: center;
     width: 20%;
+    height: 5%;
     background-color: indianred;
 }
 
@@ -11,7 +12,7 @@ td {
     border: 4px solid black;
     text-align: center;
     width: 20%;
-    height: 20%;
+    height: 19%;
 }
 
 .row {
@@ -21,7 +22,7 @@ td {
     outline: 4px solid black;
     text-align: center;
     width: 800px;
-    height: 850px;
+    height: 800px;
 }
 
 #free {
@@ -37,4 +38,8 @@ h1, p {
 .comicsans {
     font-family: "Comic Sans MS", cursive, "sans-serif";
     font-weight: bold;
+}
+
+ul {
+    text-align: center;
 }
