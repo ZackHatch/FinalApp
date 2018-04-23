@@ -34,7 +34,7 @@ var button = document.getElementById('addList');
 button.addEventListener('click', additem)
 
 function additem() {
-    var i = document.getElementById("item").value;
+    var input = document.getElementById("item").value;
     var li = document.createElement("li");
     var deletebutton = document.createElement("button");
     deletebutton.textContent = "Delete";
