@@ -48,5 +48,5 @@ function additem() {
 }
 
 for (i = 0; i < 24; i++) {
-document.getElementById("1").textContent = input
+document.getElementById(i).textContent = input
     }
