@@ -47,6 +47,6 @@ function additem() {
 function Generate() {
 
 for (i = 0; i < 24; i++) {
-    document.getElementById(i+1).textContent = array[i];
+    document.getElementById(i+1).textContent = someArray[i];
 }
 }
