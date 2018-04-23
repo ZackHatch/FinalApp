@@ -42,10 +42,13 @@ function additem() {
     deletebutton.addEventListener('click', () => {
         deletebutton.parentElement.remove();
     });
-    for (i = 0; i < 24; i++) {
-document.getElementById("1").textContent = input
-    }
     li.textContent = input + "";
     li.appendChild(deletebutton);
     return document.getElementById("ul").appendChild(li);
+}
+
+function loop() {
+    for (i = 0; i < 24; i++) {
+document.getElementById("1").textContent = input
+    }
 }
