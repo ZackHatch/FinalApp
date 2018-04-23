@@ -44,6 +44,9 @@ function additem() {
     return document.getElementById("ul").appendChild(li);
 }
 
+var generateButton = document.getElementById('generate');
+button.addEventListener('click', Generate())
+
 function Generate() {
     shuffle(array);
     for (i = 0; i < 24; i++) {
@@ -51,5 +54,4 @@ function Generate() {
     }
 }
 
-var generateButton = document.getElementById('generate');
-button.addEventListener('click', Generate)
+
