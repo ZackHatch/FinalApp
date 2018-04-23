@@ -46,8 +46,6 @@ function additem() {
 
 function loop {
 for (i = 0; i < 24; i++) {
-    document.getElementById().textContent = input
+    document.getElementById(i+1).textContent = someArray[i];
 }
-
-var rand = Math.random()
 }
