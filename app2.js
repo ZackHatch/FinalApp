@@ -1,4 +1,4 @@
-var button = document.getElementById("item");
+var button1 = document.getElementById("item");
 button.addEventListener('click', () => {
     document.getElementById('addList').textContent = putinarray()
 });
