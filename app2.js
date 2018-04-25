@@ -45,13 +45,11 @@ function additem() {
 }
 
 var generateButton = document.getElementById('generate');
-button.addEventListener('click', Generate())
+generateButton.addEventListener('click', generateArray)
 
-function Generate() {
+function generateArray() {
     shuffle(array);
     for (i = 0; i < 24; i++) {
         document.getElementById(i + 1).textContent = array[i];
     }
 }
-
-
