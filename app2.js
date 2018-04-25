@@ -2,10 +2,13 @@ var array = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"
 
 function putinarray() {
     var input = document.getElementById("item").value;
-    var someArray = str.split(",");
-    someArray.push(input);
+    //var someArray = str.split(",");
+   // someArray.push(input);
+    var j = 0;
+    array[j] = input;
+    console.log(array);
+    j++
 }
-
 function shuffle(someArray) {
     for (var i = someArray.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
@@ -16,7 +19,6 @@ function shuffle(someArray) {
     console.log(someArray);
     return someArray;
 }
-
 function insertText() {
     document.getElementById('').innerHTML = "Some text to enter";
 }
@@ -42,6 +44,7 @@ function additem() {
     li.textContent = input + "";
     li.appendChild(deletebutton);
     return document.getElementById("ul").appendChild(li);
+    putinarray(array);
 }
 
 var generateButton = document.getElementById('generate');
@@ -53,3 +56,4 @@ function generateArray() {
         document.getElementById(i + 1).textContent = array[i];
     }
 }
+
