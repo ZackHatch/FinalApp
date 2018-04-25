@@ -16,7 +16,7 @@ td {
 }
 
 .row {
-    outline: 1px solid black;
+
 }
 #bingo {
     outline: 4px solid black;
@@ -26,7 +26,7 @@ td {
 }
 
 #free {
-    font-size: 18pt;
+    font-size: 24pt;
     font-weight: bold;
     text-align: center;
     background-color: orange;
