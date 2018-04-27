@@ -15,9 +15,6 @@ function insertText() {
     document.getElementById('').innerHTML = "Some text to enter";
 }
 
-//alert that pops up if you try to generate before it is full
-//alert that pops up if you try to add more than 24
-
 var button = document.getElementById('addList'),
     j = 0
 button.addEventListener('click', additem)
@@ -46,8 +43,5 @@ var resetButton = document.getElementById('reset');
 resetButton.addEventListener('click', reset)
 
 function reset() {
-    var array = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", " 17", "18", " 19", "20", "21", "22", "23", "24"];
-    var someArray = array;
-    return document.getElementById("displayArray").textContent = array;
+   window.location.reload()
 }
-//plan: get rid of each "delete" button and add a reset button that sets the array back ot it's original value
