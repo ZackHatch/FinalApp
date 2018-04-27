@@ -24,18 +24,11 @@ button.addEventListener('click', additem)
 function additem() {
     var input = document.getElementById("item").value;
     var li = document.createElement("li");
-    var deletebutton = document.createElement("button");
-    deletebutton.textContent = "Delete";
-    deletebutton.className = "delete"
-    deletebutton.addEventListener('click', () => {
-        deletebutton.parentElement.remove();
-    });
     li.textContent = input + "";
-    li.appendChild(deletebutton);
     array[j] = input;
     console.log(array);
     j++
-    return document.getElementById("ul").appendChild(li);
+    return document.getElementById("displayArray").textContent = array;
 }
 
 var generateButton = document.getElementById('generate');
@@ -47,4 +40,6 @@ function generateArray() {
         document.getElementById(i + 1).textContent = array[i];
     }
 }
+
+//plan: get rid of each "delete" button and add a reset button that sets the array back ot it's original value
 
