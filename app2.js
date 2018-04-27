@@ -10,6 +10,7 @@ function shuffle(someArray) {
     console.log(someArray);
     return someArray;
 }
+
 function insertText() {
     document.getElementById('').innerHTML = "Some text to enter";
 }
@@ -41,5 +42,12 @@ function generateArray() {
     }
 }
 
-//plan: get rid of each "delete" button and add a reset button that sets the array back ot it's original value
+var resetButton = document.getElementById('reset');
+resetButton.addEventListener('click', reset)
 
+function reset() {
+    var array = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", " 17", "18", " 19", "20", "21", "22", "23", "24"];
+    var someArray = array;
+    return document.getElementById("displayArray").textContent = array;
+}
+//plan: get rid of each "delete" button and add a reset button that sets the array back ot it's original value

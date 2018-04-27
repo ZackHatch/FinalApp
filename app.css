@@ -40,6 +40,8 @@ h1, h3, p {
     font-weight: bold;
 }
 
-ul {
-    text-align: center;
+.button {
+    border: none;
+    color: black;
+    background-color: lightblue;
 }
