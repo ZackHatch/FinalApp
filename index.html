@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <h1 class="comicsans">Custom Bingo Card Generator!</h1>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-sm-6 text-right">
+            <input type="text" id="item">
+            <button id="addList" class="button">Add Item to List Position</button>
+            <select id="position">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+            </select>
+        </div>
+        <div class="col-sm-2 text-center">
+            <button id="generate" class="button">Shuffle</button>
+        </div>
+        <div class="col-sm-1 text-left">
+            <button id="reset" class="button">Reset</button>
+        </div>
+        <div class="col-sm-1 text-left">
+            <button id="hide" class="button">Hide Card</button>
+        </div>
+    </div>
+    <div id="displayArray" class="text-center">
+    </div>
+    <br>
+    <div id="content" hidden>
+        <table align="center" id="bingo">
+            <tr>
+                <th>B</th>
+                <th>I</th>
+                <th>N</th>
+                <th>G</th>
+                <th>O</th>
+            </tr>
+            <tr>
+                <td id="1"></td>
+                <td id="2"></td>
+                <td id="3"></td>
+                <td id="4"></td>
+                <td id="5"></td>
+            </tr>
+            <tr>
+                <td id="6"></td>
+                <td id="7"></td>
+                <td id="8"></td>
+                <td id="9"></td>
+                <td id="10"></td>
+            </tr>
+            <tr>
+                <td id="11"></td>
+                <td id="12"></td>
+                <td id="free">Free</td>
+                <td id="13"></td>
+                <td id="14"></td>
+            </tr>
+            <tr>
+                <td id="15"></td>
+                <td id="16"></td>
+                <td id="17"></td>
+                <td id="18"></td>
+                <td id="19"></td>
+            </tr>
+            <tr>
+                <td id="20"></td>
+                <td id="21"></td>
+                <td id="22"></td>
+                <td id="23"></td>
+                <td id="24"></td>
+            </tr>
+        </table>
+    </div>
+    <div>
+
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+
+
+</html>
