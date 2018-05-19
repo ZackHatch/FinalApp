@@ -1,9 +1,20 @@
-var array = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"]
+var array = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+    cardtemplate = document.getElementById("bingo"),
+    resetButton = document.getElementById('reset'),
+    addbutton = document.getElementById('addList'),
+    generateButton = document.getElementById('generate'),
+    hideButton = document.getElementById("hide"),
+    arrayreadout = document.getElementById("displayArray");
+hideButton.addEventListener("click", hidelist);
+resetButton.addEventListener('click', reset);
+addbutton.addEventListener('click', additem);
+generateButton.addEventListener('click', generateArray);
+setInterval(updatelist, 5)
 
 function shuffle(someArray) {
+    shuffled = someArray
     for (var i = someArray.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1)),
-            shuffled = someArray
             x = shuffled[i];
         shuffled[i] = shuffled[j];
         shuffled[j] = x;
@@ -11,20 +22,13 @@ function shuffle(someArray) {
     console.log(shuffled);
 }
 
-var button = document.getElementById('addList'),
-    position = document.getElementById("position"),
-    j = 0;
-button.addEventListener('click', additem)
-
 function additem() {
-    var input = document.getElementById("item").value;
+    var input = document.getElementById("item").value,
+        position = document.getElementById("position");
     array[position.value] = input;
     console.log(array);
     ++position.value
 }
-
-var generateButton = document.getElementById('generate');
-generateButton.addEventListener('click', generateArray)
 
 function generateArray() {
     shuffle(array);
@@ -34,21 +38,26 @@ function generateArray() {
     }
 }
 
-var resetButton = document.getElementById('reset');
-resetButton.addEventListener('click', reset)
+function hidelist() {
+    if (arrayreadout.hidden == false) {
+        arrayreadout.hidden = true
+        hideButton.textContent = "Unhide List"
+    } else {
+        arrayreadout.hidden = false
+        hideButton.textContent = "Hide List"
+    }
+}
+
+function updatelist() {
+    arrayreadout.textContent = ""
+    for (i = 0; i < array.length; i++) {
+        arrayreadout.textContent = arrayreadout.textContent + array[i] + " (" + i + "), "
+        if (i == array.length - 1) {
+            arrayreadout.textContent = arrayreadout.textContent + array[i] + " (" + i + ")"
+        }
+    }
+}
 
 function reset() {
-   window.location.reload()
-}
-
-var hideButton = document.getElementById("hide");
-hideButton.addEventListener("click", hidecard);
-
-function hidecard() {
-    document.getElementById("content").hidden = true
-}
-
-setInterval(update, 5);
-function update() {
-    document.getElementById("displayArray").textContent = "List of entries: " + array
+    window.location.reload()
 }
