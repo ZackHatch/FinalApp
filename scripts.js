@@ -26,15 +26,14 @@ resetButton.addEventListener("click", () => {
 
 setInterval(updatelist, 5)
 
-function shuffle(someArray) {
-    shuffled = someArray
-    for (var i = someArray.length - 1; i > 0; i--) {
+function shuffle() {
+    for (var i = array.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1)),
-            x = shuffled[i];
-        shuffled[i] = shuffled[j];
-        shuffled[j] = x;
+            x = array[i];
+        array[i] = array[j];
+        array[j] = x;
     }
-    console.log(shuffled);
+    console.log(array)
 }
 
 function additem() {
@@ -49,10 +48,10 @@ function additem() {
 }
 
 function generatecards() {
-    for (i = 0; i < players.value - 1; i++) {
+    for (i = 0; i < players.value; i++) {
+        shuffle(array)
         for (j = 0; j < 24; j++) {
-            shuffle(array)
-            document.getElementById(j + 1).textContent = array[i];
+            document.getElementById(j + 1).textContent = array[j];
         }
         clone = template.cloneNode(true)
         document.getElementById("cards").appendChild(clone);
