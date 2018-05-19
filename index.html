@@ -6,15 +6,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <h1 class="comicsans">Custom Bingo Card Generator!</h1>
+    <title>Bingo Generator</title>
 </head>
 
 <body>
-    <div class="row">
-        <div class="col-sm-6 text-center">
-            <input type="text" id="item">
-            <button id="addList" class="button">Add Item to List Position</button>
-            <select id="position">
+    <div id="unfriendly">
+        <h1 class="comicsans text-center">Custom Bingo Card Generator!</h1>
+        <div class="row">
+            <div class="col-sm-6 text-center">
+                <input type="text" id="item">
+                <button id="addList" class="button">Add Item to Position</button>
+                <select id="position">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -40,66 +42,73 @@
                 <option value="22">22</option>
                 <option value="23">23</option>
             </select>
+            </div>
+            <div class="col-sm-6 text-center">
+                Players:
+                <input id="players" style="width:20px" value="1">
+                <button id="generate" class="button">Generate</button>
+                <button id="reset" class="button">Reset</button>
+                <button id="hide" class="button">Hide List</button>
+                <button id="import" class="button">Import</button>
+                <button id="export" class="button">Export</button>
+            </div>
         </div>
-        <div class="col-sm-6 text-center">
-            <button id="generate" class="button">Shuffle</button>
-            <button id="reset" class="button">Reset</button>
-            <button id="hide" class="button">Hide List</button>
-            <button id="import" class="button">Import</button>
-            <button id="export" class="button">Export</button>
+        <div id="displayparent">
+            <div class="text-center">Entries:</div>
+            <div id="displayArray" class="text-center">
+            </div>
         </div>
+        <br>
     </div>
-    <div id="displayparent">
-        <div class="text-center">Entries:</div>
-        <div id="displayArray" class="text-center">
-        </div>
-    </div>
+    <div class="text-center"><button id="printerbutton" class="button">Toggle Printer Mode</button></div>
     <br>
-    <div id="content">
-        <table align="center" id="bingo">
-            <tr>
-                <th>B</th>
-                <th>I</th>
-                <th>N</th>
-                <th>G</th>
-                <th>O</th>
-            </tr>
-            <tr>
-                <td id="1"></td>
-                <td id="2"></td>
-                <td id="3"></td>
-                <td id="4"></td>
-                <td id="5"></td>
-            </tr>
-            <tr>
-                <td id="6"></td>
-                <td id="7"></td>
-                <td id="8"></td>
-                <td id="9"></td>
-                <td id="10"></td>
-            </tr>
-            <tr>
-                <td id="11"></td>
-                <td id="12"></td>
-                <td id="free">Free</td>
-                <td id="13"></td>
-                <td id="14"></td>
-            </tr>
-            <tr>
-                <td id="15"></td>
-                <td id="16"></td>
-                <td id="17"></td>
-                <td id="18"></td>
-                <td id="19"></td>
-            </tr>
-            <tr>
-                <td id="20"></td>
-                <td id="21"></td>
-                <td id="22"></td>
-                <td id="23"></td>
-                <td id="24"></td>
-            </tr>
-        </table>
+    <div id="cards">
+        <div id="template">
+            <table align="center" class="bingo" id="template">
+                <tr>
+                    <th>B</th>
+                    <th>I</th>
+                    <th>N</th>
+                    <th>G</th>
+                    <th>O</th>
+                </tr>
+                <tr>
+                    <td id="1"></td>
+                    <td id="2"></td>
+                    <td id="3"></td>
+                    <td id="4"></td>
+                    <td id="5"></td>
+                </tr>
+                <tr>
+                    <td id="6"></td>
+                    <td id="7"></td>
+                    <td id="8"></td>
+                    <td id="9"></td>
+                    <td id="10"></td>
+                </tr>
+                <tr>
+                    <td id="11"></td>
+                    <td id="12"></td>
+                    <td id="free">Free</td>
+                    <td id="13"></td>
+                    <td id="14"></td>
+                </tr>
+                <tr>
+                    <td id="15"></td>
+                    <td id="16"></td>
+                    <td id="17"></td>
+                    <td id="18"></td>
+                    <td id="19"></td>
+                </tr>
+                <tr>
+                    <td id="20"></td>
+                    <td id="21"></td>
+                    <td id="22"></td>
+                    <td id="23"></td>
+                    <td id="24"></td>
+                </tr>
+            </table>
+        </div>
     </div>
     <script src="scripts.js"></script>
 </body>

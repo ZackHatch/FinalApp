@@ -1,5 +1,5 @@
 var array = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
-    cardtemplate = document.getElementById("bingo"),
+    template = document.getElementById("template"),
     resetButton = document.getElementById("reset"),
     addbutton = document.getElementById("addList"),
     generateButton = document.getElementById("generate"),
@@ -9,14 +9,17 @@ var array = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
     inputbox = document.getElementById("item"),
     position = document.getElementById("position"),
     displayparent = document.getElementById("displayparent"),
-    arrayreadout = document.getElementById("displayArray");
+    arrayreadout = document.getElementById("displayArray"),
+    unfriendly = document.getElementById("unfriendly"),
+    printerbutton = document.getElementById("printerbutton");
 
 hideButton.addEventListener("click", hidelist);
 addbutton.addEventListener("click", additem);
-generateButton.addEventListener("click", generateArray);
+generateButton.addEventListener("click", generatecards);
 importbutton.addEventListener("click", importarray);
 position.addEventListener("click", inputboxliveupdate);
 exportbutton.addEventListener("click", exportarray);
+printerbutton.addEventListener("click", printermode);
 resetButton.addEventListener("click", () => {
     window.location.reload()
 });
@@ -45,11 +48,14 @@ function additem() {
     inputboxliveupdate()
 }
 
-function generateArray() {
-    shuffle(array);
-    document.getElementById("content").hidden = false
-    for (i = 0; i < 24; i++) {
-        document.getElementById(i + 1).textContent = array[i];
+function generatecards() {
+    for (i = 0; i < players.value - 1; i++) {
+        for (j = 0; j < 24; j++) {
+            shuffle(array)
+            document.getElementById(j + 1).textContent = array[i];
+        }
+        clone = template.cloneNode(true)
+        document.getElementById("cards").appendChild(clone);
     }
 }
 
@@ -79,7 +85,7 @@ function importarray() {
         importedarray = promptentry.split(",");
     if (importedarray.length == 24) {
         array = importedarray
-        console.log("Import Successful")
+        alert("Import Successful")
         inputboxliveupdate()
     } else {
         alert("Import Array Invalid")
@@ -96,6 +102,7 @@ function exportarray() {
         }
     }
     if (complete == true) {
+        alert("Hint: Ctrl-A then Ctrl-C")
         alert(array)
     } else {
         alert("Cannot export incomplete list")
@@ -104,4 +111,14 @@ function exportarray() {
 
 function inputboxliveupdate() {
     inputbox.value = array[position.value]
+}
+
+function printermode(event) {
+    if (unfriendly.hidden == false) {
+        unfriendly.hidden = true
+        template.hidden = true
+    } else if (unfriendly.hidden == true) {
+        unfriendly.hidden = false
+        template.hidden = false
+    }
 }
