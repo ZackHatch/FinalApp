@@ -17,7 +17,7 @@ td {
 .bingo {
     outline: 4px solid black;
     text-align: center;
-    width: 100%;
+    width: 800px;
     height: 800px;
     page-break-inside: avoid;
 }
